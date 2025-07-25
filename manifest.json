@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Copy TeX",
+    "version": "1.0",
+    "description": "A extension to copy raw TeX source from KaTeX pages",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
